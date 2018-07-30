@@ -1,17 +1,83 @@
+* {
+  box-sizing: border-box;
+  }
+
 body {
-  padding-top: 50px;
+
+    background-color: rgba(79, 88, 173, 0.158);
+    background: url(https://photojournal.jpl.nasa.gov/jpeg/PIA17005.jpg) no-repeat center fixed;
+    background-size: cover;
+    font-family: 'Libre Baskerville', serif;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+}
+
+main, header {
+    max-width: 720px;
+    margin: 0 auto;
+    background-color: rgba(15, 1, 1, 0.493);
+}
+
+header {
+    font-size: 2em;
+    color: rgb(164, 255, 44);
+    text-shadow: 1px 1px whitesmoke;
+}
+
+div {
+  line-height: 1.5em;
+  max-width: 700px;
+  margin: auto;
+  padding: 15px 10px;
 }
 
 button {
-    margin: 10px;
-  }
-/* Create four equal columns that floats next to eachother */
-
-.image {
-  float: left;
-  width: 33%;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: rgba(90, 6, 201, 0.247);
+    padding: 40px;
+    /* transition-property: color, background;
+    transition-duration: 0.35s;
+    transition-timing-function: ease-in-out; */
+    width: 450px;
+    cursor: pointer;
 }
 
-img:hover {
-  box-shadow: 2px 2px;
+.launch {
+  margin: 40px 0;
+}
+
+form {
+  max-width: 640px;
+  text-align: left;
+  margin: auto;
+}
+
+.quiz-content {
+  border: 0;
+
+}
+
+.option {
+  width: 90%;
+  display: block;
+}
+
+
+
+.option {
+  margin: 5px 10px;
+  line-height: 1.5em;
+}
+
+.hidden {
+  display: none;
+}
+
+@media only screen and (max-width:420px) {
+  header h1 {
+    font-size: inherit;
+  }
 }

@@ -1,30 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width">
-        <title>AJAX YouTube API example using .getJSON</title>
-        <script
-          src="https://code.jquery.com/jquery-3.2.1.min.js"
-          integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-          crossorigin="anonymous"></script>
-        <link href="index.css" rel="stylesheet" type="text/css" />
-    </head>
-    <body>
-      <main role="main">
-        <h1>Search repos by name on YouTube</h1>
-          <form action="#" class="js-search-form">
-            <label>
-            <input type="text" class="js-query" aria-label="text">
-            </label>
-            <button type="submit">Search</button>
-          </form>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Astronomy Quiz</title>
+    <link <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+    <meta name="description" content="Test your knowledge of the Universe">
+    <link href="index.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
+  </head>
+  <body>
+    <header role="banner">
+      <h1>Astronomy Quiz</h1>
+    </header>
 
-          <h2>Results</h2>
-          <div class="js-search-results">
+  <main role="main">
+    <div class="start">
+      <p>Test your knowledge of the Universe!</p>
+      <p>Click the correct answer to determine your aptitude for outterspace travel!</p>
+      <button id="js-launch"> I'm ready to launch!</button>
+        <!-- end of intro -->
+    </div>
 
-          </div>
-      </main>
-      <script src="index.js"></script>
-    </body>
+    <div class="questions-page">
+      <form class="questions">
+        <fieldset class="quiz-content">
+        </fieldset>
+      </form>
+      <!-- end of quiz-content -->
+    </div>
+
+    <div class="feedback">
+
+        <!-- end of feedback -->
+    </div>
+
+    <div class="final hidden">
+      <h1></h1>
+      <p>Final Score: <span></span> out of 10!</p>
+      <button id="js-relaunch">Play again!</button>
+      <!-- end of results -->
+    </div>
+  </main>
+  <script src="//code.jquery.com/jquery.min.js"></script>
+  <script src="index.js"></script>
+  <script src="choices.js"></script>
+
+  </body>
 </html>
