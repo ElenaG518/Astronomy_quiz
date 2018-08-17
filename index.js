@@ -40,7 +40,7 @@ function correctAnswer() {
   console.log("correctAnswer ran")
   score++;
   $('.questions').hide();
-  $('.feedback').show().html(`
+  $('.feedback').removeClass('hidden').html(`
     <h2>You are correct!</h2>
     <p>Score: ${score}</p>
     <button class="next">next</button>`);
@@ -49,10 +49,10 @@ function correctAnswer() {
 function wrongAnswer(text) {
   console.log("wrongAnswer ran")
   $('.questions').hide();
-  $('.feedback').show().html(`
+  $('.feedback').removeClass('hidden').html(`
     <h2>Wrong Answer!</h2>
-  <p class="correct">The correct answer is: ${text}</p>
-  <p>Score: ${score}</p>
+  <p class="correct">The correct answer is: ${text}<br><br>
+  Score: ${score}</p>
   <button class="next">next</button>`);
 }
 
@@ -78,11 +78,11 @@ function finalResult() {
   console.log('`finalResult` ran');
   $('.final').removeClass('hidden');
   if (score<5) {
-    $('.final h1').text('Like this, you\'ll never make it to platinum!!');
+    $('.final h2').text('You need a lot of improvement!!');
   } else if ((score>=5)&&(score<8)) {
-    $('.final h1').text('You need to watch more episodes of Cosmos!');
+    $('.final h2').text('You need to watch more episodes of Cosmos!');
   } else {
-    $('.final h1').text('You are ready for space exploration!');
+    $('.final h2').text('You are ready for space exploration!');
   }
   $('.final span').text(score);
 }
@@ -90,11 +90,11 @@ function finalResult() {
 // this function will be our callback when the page loads. it's responsible for adding eventListeners.
 
 // $(document).ready(function(){
-  $(function() {
+$(function() {
 
 //  When button in intro page is pressed, quiz starts and start page disapears.
 
-$("#js-launch").click(function(event) {
+$(".js-launch").click(function(event) {
     $('.start').hide();
     renderQuestion();
     });
@@ -104,8 +104,9 @@ $('#js-relaunch').click(event=> {
     event.preventDefault();
     console.log('Play again button has been pressed');
     $('.start').show();
-    $('.questions, .feedback').hide;
+    $('.questions').hide;
     $('.final').addClass('hidden');
+    $('.feedback').addClass('hidden');
     indexNumber =0;
     score=0;
 
@@ -125,7 +126,7 @@ $('#js-relaunch').click(event=> {
 $('.feedback').on('click', '.next', event=> {
     console.log("Next Question calling renderQuestion");
     renderQuestion();
-    $('.feedback').hide();
+    $('.feedback').addClass('hidden');
   });
 
 })

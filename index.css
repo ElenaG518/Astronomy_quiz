@@ -8,7 +8,7 @@
 
 body {
   background: url(https://photojournal.jpl.nasa.gov/jpeg/PIA17005.jpg) repeat center fixed;
-  background-size: cover;  
+  background-size: cover;
   font-family: 'Libre Baskerville', serif;    text-align: center;
   color: white;
   font-size: 18px;
@@ -17,7 +17,7 @@ body {
 main {
   max-width: 720px;
   margin: 0 auto;
-}    
+}
 
 header {
   margin: 0 auto 30px;
@@ -65,7 +65,7 @@ button {
   color: white;
   padding: 40px;
   cursor: pointer;
-  margin: 30px auto;   
+  margin: 30px auto;
 }
 
 button:hover, button:focus {
@@ -74,7 +74,7 @@ button:hover, button:focus {
 
 .js-launch {
   margin: 40px 0 20px;
-  font-size: 125%; 
+  font-size: 125%;
   border: 25px outset mediumslateblue;
 }
 
@@ -109,7 +109,7 @@ legend {
 @media only screen and (min-width:320px) and (max-width: 490px) {
   header h1, .final h1 {
     font-size: inherit;
-    line-height: 1.5em;  
+    line-height: 1.5em;
   }
 
   h2 {
@@ -123,7 +123,7 @@ legend {
  header h1, .final h1 {
    font-size:1.5em;
    line-height: 2em;
-  }  
+  }
 }
 
 @media only screen and (max-width: 420px) {
