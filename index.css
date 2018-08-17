@@ -1,52 +1,85 @@
 * {
   box-sizing: border-box;
+  padding: 0;
+  border: 0;
+  margin:0;
+  font-size: 100%;
   }
 
 body {
-
-    background-color: rgba(79, 88, 173, 0.158);
-    background: url(https://photojournal.jpl.nasa.gov/jpeg/PIA17005.jpg) no-repeat center fixed;
-    background-size: cover;
-    font-family: 'Libre Baskerville', serif;
-    text-align: center;
-    color: white;
-    font-size: 18px;
+  background: url(https://photojournal.jpl.nasa.gov/jpeg/PIA17005.jpg) repeat center fixed;
+  background-size: cover;  
+  font-family: 'Libre Baskerville', serif;    text-align: center;
+  color: white;
+  font-size: 18px;
 }
 
-main, header {
-    max-width: 720px;
-    margin: 0 auto;
-    background-color: rgba(15, 1, 1, 0.493);
-}
+main {
+  max-width: 720px;
+  margin: 0 auto;
+}    
 
 header {
-    font-size: 2em;
-    color: rgb(164, 255, 44);
-    text-shadow: 1px 1px whitesmoke;
+  margin: 0 auto 30px;
+  font-size: 2em;
+  color: #81ceff;
+  text-shadow: 10px 10px 10px darkblue;
+  border: 1px outset darkblue;
+  background-color: #1b32b6;
 }
 
 div {
-  line-height: 1.5em;
+  line-height: 1.7em;
   max-width: 700px;
   margin: auto;
-  padding: 15px 10px;
+}
+
+p, h2 {
+  margin: 40px auto 20px;
+  line-height: 160%;
+  background-color: black;
+}
+
+h2 {
+  font-size: 125%;
+}
+
+/* .feedback, .final {
+  border: 5px outset navy;
+  padding: 20px;
+  background-color: #0d0b26;
+} */
+
+.start p {
+  font-size: 125%;
+  /* line-height: 160%; */
+  background-color: #020c28;
+  margin: 40px 60px;
+  padding: 0;
 }
 
 button {
-    color: white;
-    border: 1px solid white;
-    border-radius: 10px;
-    background-color: rgba(90, 6, 201, 0.247);
-    padding: 40px;
-    /* transition-property: color, background;
-    transition-duration: 0.35s;
-    transition-timing-function: ease-in-out; */
-    width: 450px;
-    cursor: pointer;
+  border: 15px outset mediumslateblue;
+  background-color: #1e0b34;
+  box-shadow: 0px 0px 1px 1px dodgerblue;
+  color: white;
+  padding: 40px;
+  cursor: pointer;
+  margin: 30px auto;   
 }
 
-.launch {
-  margin: 40px 0;
+button:hover, button:focus {
+  border: 15px inset navy;
+}
+
+.js-launch {
+  margin: 40px 0 20px;
+  font-size: 125%; 
+  border: 25px outset mediumslateblue;
+}
+
+.js-launch:focus, .js-launch:hover {
+  border: 25px inset navy;
 }
 
 form {
@@ -55,20 +88,17 @@ form {
   margin: auto;
 }
 
-.quiz-content {
-  border: 0;
-
+legend {
+  margin: 0 auto;
+  border: 5px outset navy;
+  padding: 20px;
+  background-color: #0d0b26;
 }
 
 .option {
   width: 90%;
   display: block;
-}
-
-
-
-.option {
-  margin: 5px 10px;
+  margin: 5px auto 10px;
   line-height: 1.5em;
 }
 
@@ -76,8 +106,28 @@ form {
   display: none;
 }
 
-@media only screen and (max-width:420px) {
-  header h1 {
+@media only screen and (min-width:320px) and (max-width: 490px) {
+  header h1, .final h1 {
+    font-size: inherit;
+    line-height: 1.5em;  
+  }
+
+  h2 {
+    font-size: inherit;
+  }
+}
+
+
+@media only screen and (min-width: 490px)and (max-width: 640px) {
+
+ header h1, .final h1 {
+   font-size:1.5em;
+   line-height: 2em;
+  }  
+}
+
+@media only screen and (max-width: 420px) {
+  .start p {
     font-size: inherit;
   }
 }
