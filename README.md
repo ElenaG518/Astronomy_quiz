@@ -1,6 +1,6 @@
 # Test your Knowledge of Astronomy Concepts
 
-this site is for users to test their knowledge of basic astronomy concepts..  
+This site is for users to test their knowledge of basic astronomy concepts. 
 
 The quiz contains ten questions.  
 
